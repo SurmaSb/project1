@@ -14,6 +14,7 @@ pipeline {
 
         stage('Deliver') { 
             steps {
+                sh 'pkill -F .pidfile'
                 sh 'set -x'
                 sh 'nohup npm start > log.txt&'
                 sh 'sleep 1'
