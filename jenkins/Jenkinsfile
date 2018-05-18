@@ -1,5 +1,5 @@
 pipeline {
-    agent any 
+    agent any
 
     environment {
         CI = 'true'
@@ -11,11 +11,12 @@ pipeline {
                 sh 'npm install'
             }
         }
-
+for pid in $(pidof -o %PPID -x progd); do
+    kill -TERM $pid
+done
         stage('Deliver') { 
             steps {
-                sh 'pkill -F .pidfile' 
-                sh 'set -x'
+               sh 'set -x'
                 sh 'nohup npm start > log.txt&'
                 sh 'sleep 1'
                 sh 'echo $! > .pidfile'
