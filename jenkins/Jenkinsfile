@@ -14,7 +14,7 @@ pipeline {
 
         stage('Deliver') { 
             steps {
-            sh  'killproc [-p pidfile] [ -d delay] {program} [-signal]'
+           sh 'pkill -F .pidfile'  
                sh 'set -x'
                 sh 'nohup npm start > log.txt&'
                 sh 'sleep 1'
