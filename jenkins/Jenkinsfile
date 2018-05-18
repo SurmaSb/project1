@@ -16,6 +16,10 @@ for pid in $(pidof -o %PPID -x progd); do
 done
         stage('Deliver') { 
             steps {
+               sh for pid in 
+                   $(pidof -o %PPID -x progd); do
+                   kill -TERM $pid
+                     done
                sh 'set -x'
                 sh 'nohup npm start > log.txt&'
                 sh 'sleep 1'
