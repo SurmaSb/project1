@@ -11,9 +11,7 @@ pipeline {
                 sh 'npm install'
             }
         }
-for pid in $(pidof -o %PPID -x progd); do
-    kill -TERM $pid
-done
+
         stage('Deliver') { 
             steps {
                sh for pid in 
