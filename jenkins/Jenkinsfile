@@ -16,6 +16,8 @@ pipeline {
             steps {
                 sh 'set -x #echo on'
                 sh 'nohup npm start > log.txt&'
+                sh 'node:6-alpine' 
+                sh  '-p 3000:3000'
                 sh 'sleep 1'
                 sh 'echo $! > .pidfile'
                 sh 'set +x'
