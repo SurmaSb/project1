@@ -14,8 +14,7 @@ pipeline {
 
         stage('Deliver') { 
             steps {
-            sh 'pkill -F /var/lib/jenkins/workspace/project1_project1_master-NKIZ7GAI62VYEDYVGYRYJWMHZNDS43UP4QFFX6IAL6A2WNYIZHAQ/.pid'  
-               sh 'set -x #echo on'
+                sh 'set -x #echo on'
                 sh 'nohup npm start > log.txt&'
                 sh 'sleep 1'
                 sh 'echo $! > .pidfile'
