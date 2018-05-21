@@ -4,32 +4,24 @@ pipeline {
        stages {
                 stage('Build') {
                     steps {
-                        dir('react\\my-app') {
-                            echo 'Start building process...'
+                        sh('react\\my-app') {
+                            sh 'Start building process...'
                             sh 'npm install'
                         }
                     }
                 }
                 stage('Test') {
                     steps {
-                        echo 'Testing.. //TODO run automation tests...'
+                        sh 'Testing.. //TODO run automation tests...'
                     }
                 }
                 stage('Deploy') {
                      steps {
-                        echo 'Deployment steps.. //TODO copy build file to target folder...'
+                        sh 'Deployment steps.. //TODO copy build file to target folder...'
                     }
                 }
             }
-    stage('Deliver') { 
-            steps {
-               sh 'set -x'
-               sh 'sleep 1'
-                sh 'echo $! > .pidfile'
-                sh 'set +x'
-            }
-        }
-
+   
             post { 
                 success {  
                     sh('react\\my-app') {
