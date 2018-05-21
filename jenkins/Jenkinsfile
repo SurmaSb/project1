@@ -20,7 +20,7 @@ pipeline {
                 sh 'sleep 1'
                 sh 'echo $! > .pidfile'
                 sh 'set +x'
-                sh './jenkins/scripts/kill.sh'
+                sh './var/lib/jenkins/workspace/project1_project1_master-NKIZ7GAI62VYEDYVGYRYJWMHZNDS43UP4QFFX6IAL6A2WNYIZHAQ/kill.sh'
             }
         }
     }
