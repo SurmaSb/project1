@@ -5,23 +5,36 @@ pipeline {
         CI = 'true'
     }
 
-    stages {
-        stage('Build') {
-            steps {
-                sh 'npm install'
+    
+           
+           stages {
+                stage('Build') {
+                    steps {
+                        dir('react\\my-app') {
+                            echo 'Start building process...'
+                            bat 'npm install'
+                        }
+                    }
+                }
+                stage('Test') {
+                    steps {
+                        echo 'Testing.. //TODO run automation tests...'
+                    }
+                }
+                stage('Deploy') {
+                     steps {
+                        echo 'Deployment steps.. //TODO copy build file to target folder...'
+                    }
+                }
             }
-        }
 
-        stage('Deliver') { 
-            steps {
-                sh 'pkill -F /var/lib/jenkins/workspace/project1_project1_master-NKIZ7GAI62VYEDYVGYRYJWMHZNDS43UP4QFFX6IAL6A2WNYIZHAQ/.pid'
-                sh 'set -x #echo on'
-                sh 'nohup npm start > log.txt&'
-                sh 'sleep 1'
-                sh 'echo $! > .pidfile'
-                sh 'set +x'
-                
+            post { 
+                success {  
+                    dir('react\\my-app') {
+                            bat 'npm start'
+                        }
+                }
             }
         }
-    }
-}
+   
+
