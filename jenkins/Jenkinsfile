@@ -1,34 +1,25 @@
 pipeline {
     agent any
 
-       stages {
-                stage('Build') {
-                    steps {
-                        sh('react\\my-app') {
-                            sh 'Start building process...'
-                            sh 'npm install'
-                        }
-                    }
-                }
-                stage('Test') {
-                    steps {
-                        sh 'Testing.. //TODO run automation tests...'
-                    }
-                }
-                stage('Deploy') {
-                     steps {
-                        sh 'Deployment steps.. //TODO copy build file to target folder...'
-                    }
-                }
-            }
-   
-            post { 
-                success {  
-                    sh('react\\my-app') {
-                            sh 'npm start'
-                        }
-                }
+    environment {
+        CI = 'true'
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'npm install'
             }
         }
-   
 
+        stage('Deliver') { 
+            steps {
+               sh 'set -x'
+                sh 'nohup npm start &'
+                sh 'sleep 1'
+                sh 'echo $! > .pidfile'
+                sh 'set +x'
+            }
+        }
+    }
+}
