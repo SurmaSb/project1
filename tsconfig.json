@@ -2,9 +2,9 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
-     "paths": {   
-       "*": ["*", "src/*"]
- },
+    "paths": {
+      "*": ["*", "src/*"]
+    },
     "outDir": "build/dist",
     "module": "esnext",
     "target": "es5",
