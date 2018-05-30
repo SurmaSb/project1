@@ -1,18 +1,17 @@
 {
   "compilerOptions": {
-      "outDir": "build/dist",
-    "module": "es2015",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*", "src/*"]
+    },
+    "outDir": "build/dist",
+    "module": "esnext",
     "target": "es5",
-    "lib": [
-      "es2017",
-      "es6",
-      "es7",
-      "dom",
-      "scripthost"
-    ],
+    "lib": ["es6", "dom"],
     "sourceMap": true,
     "allowJs": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "moduleResolution": "node",
     "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
@@ -21,21 +20,10 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true
-    },
-   
- "filesGlob": [
-    "typings/index.d.ts",
-    "src/**/*.ts",
-    "src/**/*.tsx"
-  ],
-
-  "include": [
-    "src/**/*"
-  ],
+    "noUnusedLocals": true
+  },
   "exclude": [
+    "config-overrides.js",
     "node_modules",
     "build",
     "scripts",
