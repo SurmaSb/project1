@@ -1,4 +1,7 @@
 {
+  "name": "project1",
+  "version": "0.1.0",
+  "private": true,
   "devDependencies": {
     "node-sass": "^4.8.3",
     "react-scripts-ts": "2.7.0",
