@@ -1,4 +1,3 @@
-import registerServiceWorker from './registerServiceWorker';
 import App from './App';
 import './index.css';
 import createBrowserHistory from 'history/createBrowserHistory';
@@ -6,18 +5,9 @@ import  {Router, Route}  from 'react-router';
 import { Provider } from 'react-redux';
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-
-
-
-
-
-
-
+import registerServiceWorker from './registerServiceWorker';
 
 const browserHistory = createBrowserHistory();
-
-
-
 
 ReactDOM.render( (
         <Provider>
@@ -32,6 +22,7 @@ ReactDOM.render( (
 
     document.getElementById('root') as HTMLElement
 );
+
 registerServiceWorker();
 
 
