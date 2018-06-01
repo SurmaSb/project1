@@ -19,13 +19,5 @@ class App extends React.Component {
     );
   }
 }
-const App = ()=> (
-    <div>
-        <ul>
-            <li>
-                <a hreff="/">Главная</a>
-            </li>
-        </ul>
-    </div>
-)
+
 export default App;
