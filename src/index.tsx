@@ -10,6 +10,6 @@ ReactDOM.render(
         <App />,
 
     </provider>
-  document.getElementById('root') as HTMLElement
+ document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();
