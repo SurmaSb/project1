@@ -6,5 +6,11 @@ import { BrowserRouter } from 'react-router-dom';
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
+  ReactDOM.render((
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+), document.getElementById('root'))
+
   ReactDOM.unmountComponentAtNode(div);
 });
