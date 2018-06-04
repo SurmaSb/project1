@@ -22,5 +22,6 @@ ReactDOM.render((
 
     document.getElementById('root') as HTMLElement
 );
+fdatasync
 
 registerServiceWorker();
