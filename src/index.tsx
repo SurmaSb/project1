@@ -9,13 +9,6 @@ import registerServiceWorker from './registerServiceWorker';
 
 
 
-
-
-
-const browserHistory = createBrowserHistory();
-
-
-
 ReactDOM.render( 
       
     document.getElementById('root') as HTMLElement
