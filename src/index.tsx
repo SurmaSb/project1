@@ -1,6 +1,6 @@
 import createBrowserHistory from 'history/createBrowserHistory';
 import * as React from 'react';
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {Route, Router} from 'react-router';
 import App from './App';
@@ -10,18 +10,17 @@ import registerServiceWorker from './registerServiceWorker';
 const browserHistory = createBrowserHistory();
 
 
-ReactDOM.render(<Provider>
+ReactDOM.render((
+        <Provider>
 
-        <Router history={browserHistory}>
+            <Router history={browserHistory}>
 
-            <Route path="/" component={App}/>
-        </Router>
-    </Provider>,
+                <Route path="/" component={App}/>
+            </Router>
+        </Provider>),
 
 
     document.getElementById('root') as HTMLElement
 );
 
-
 registerServiceWorker();
-
