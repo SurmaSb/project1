@@ -8,7 +8,15 @@ import  {Provider } from 'react-redux';
 import  {Router, Route}  from 'react-router';
 import './index.css';
 
+
+
+
+
+
+
 const browserHistory = createBrowserHistory();
+
+
 
 ReactDOM.render( (
         <Provider>
@@ -20,11 +28,9 @@ ReactDOM.render( (
         </Provider>),
 
 
-
     document.getElementById('root') as HTMLElement
 );
 
+
+
 registerServiceWorker();
-
-
-
