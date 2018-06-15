@@ -5,14 +5,18 @@
   "dependencies": {
     "@types/react-redux": "5.0.15",
     "@types/react-router-dom": "4.2.4",
+    "delete": "^1.1.0",
     "history": "4.7.2",
+    "node_module": "0.0.0",
+    "npm": "^6.1.0",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0",
     "react-redux": "5.0.7",
+    "react-dom": "^16.4.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-router-native": "^4.2.0",
-    "react-scripts-ts": "2.16.0"
+    "react-scripts-ts": "^2.16.0",
+    "update": "^0.7.4"
   },
   "scripts": {
     "start": "react-scripts-ts start",
