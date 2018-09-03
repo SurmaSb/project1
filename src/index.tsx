@@ -7,12 +7,13 @@ import About from './About';
 import App from './App';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
+import {store} from "./Store";
 
 const browserHistory = createBrowserHistory();
 
 
 ReactDOM.render((
-        <Provider>
+        <Provider store={store}>
 
             <Router history={browserHistory}>
                 <Switch>
@@ -23,7 +24,7 @@ ReactDOM.render((
                 </Switch>
 
             </Router>
-        </Provider>),
+        </Provider> ),
 
 
     document.getElementById('root') as HTMLElement

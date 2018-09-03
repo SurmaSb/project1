@@ -6,7 +6,7 @@ class Menu extends React.Component {
         return (
             <div>
                 <Link to="/">Tracks</Link>
-                <Link to="/about">About</Link>
+                <Link to="/About">About</Link>
             </div>
         );
     }
