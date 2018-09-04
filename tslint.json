@@ -3,16 +3,11 @@
     "tslint:recommended",
     "tslint-react",
     "tslint-config-prettier"
-
   ],
   "linterOptions": {
     "exclude": [
       "config/**/*.js",
       "node_modules/**/*.ts"
     ]
-  },
-
-  " rules " : {
-    " interface name " : [ true, "never-prefix" ]
   }
 }
