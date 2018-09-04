@@ -1,10 +1,12 @@
-import {PatchArea, PatchReducer} from '@state-sync/repatch';
-import {applyMiddleware, combineReducers, createStore, Store} from 'redux';
+import { PatchArea, PatchReducer } from '@state-sync/repatch';
+import { Store } from 'redux';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
 
 export interface State {
 }
 
-const initialState: State = {};
+const initialState: State = {
+};
 
 let reducers = PatchReducer(initialState, combineReducers({}));
 
