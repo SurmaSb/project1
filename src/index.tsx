@@ -7,7 +7,7 @@ import About from './About';
 import App from './App';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
-import {store} from "./Store";
+import {store} from "../node_modules/@state-sync/Store";
 
 const browserHistory = createBrowserHistory();
 
