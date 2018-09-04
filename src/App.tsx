@@ -2,13 +2,10 @@ import * as React from 'react';
 import './App.css';
 
 import logo from './logo.svg';
-import Menu from './Menu';
 
 class App extends React.Component {
   public render() {
         return (
-            <div>
-                <Menu />
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
@@ -17,8 +14,6 @@ class App extends React.Component {
                 <p className="App-intro">
                     To get started, edit <code>src/App.tsx</code> and save to reload.
                 </p>
-            </div>
-
             </div>
         );
     }
